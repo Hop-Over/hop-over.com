@@ -633,8 +633,6 @@ pre code {
 .col-auto, .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
   position: relative;
   width: 100%;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
 }
 
 .col {
@@ -7553,7 +7551,7 @@ button.bg-dark:focus {
 
 .mb-1,
 .my-1 {
-  margin-bottom: 0.25rem !important;
+  padding: 0;
 }
 
 .ml-1,
@@ -7572,7 +7570,8 @@ button.bg-dark:focus {
 
 .mr-2,
 .mx-2 {
-  margin-right: 0.5rem !important;
+  margin-left: 10rem !important;
+  margin-top: 15rem;
 }
 
 .mb-2,
@@ -7582,7 +7581,7 @@ button.bg-dark:focus {
 
 .ml-2,
 .mx-2 {
-  margin-left: 0.5rem !important;
+  margin-left: -40rem !important;
 }
 
 .m-3 {
@@ -7649,7 +7648,7 @@ button.bg-dark:focus {
 
 .mb-5,
 .my-5 {
-  margin-bottom: 4rem !important;
+  margin-bottom: 3rem !important;
 }
 
 .ml-5,
@@ -7919,6 +7918,16 @@ button.bg-dark:focus {
 .ml-n5,
 .mx-n5 {
   margin-left: -11.5rem !important;
+}
+
+.mr-n6,
+.mx-n6 {
+  margin-right: auto !important;
+}
+
+.ml-n6,
+.mx-n6 {
+  margin-left: auto !important;
 }
 
 .m-auto {
@@ -10021,8 +10030,10 @@ h3 {
     border-color: #dee2e6;
   }
 }
+
 .page-section {
-  padding: 6rem 0;
+  padding: 0;
+  width: 100%;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
@@ -10157,7 +10168,7 @@ h3 {
   }
 }
 .masthead {
-  padding-top: calc(6rem + 74px);
+  padding-top: calc(5rem + 74px);
   padding-bottom: 6rem;
   box-shadow: 0 5px 5px 0px #F4F4F4;
 }
@@ -10174,18 +10185,18 @@ h3 {
 
 .masthead .masthead-icon{
   width: 5rem;
-  margin-top: 0.5rem;
+  margin-top: 0.1rem;
 }
 
 @media (min-width: 992px) {
   .masthead {
-    padding-top: calc(6rem + 104px);
+    padding-top: calc(3.5rem + 104px);
     padding-bottom: 6rem;
   }
   .masthead .masthead-heading {
     font-size: 3.5rem;
     line-height: 3.5rem;
-    padding-top: 5rem;
+    padding-top: 3rem;
   }
   .masthead .masthead-subheading {
     font-size: 1.5rem;
@@ -10200,6 +10211,19 @@ h3 {
 }
 
 .intuitive-img{
+  margin-top: 5rem;
+  width: 45rem;
+}
+
+.bubble-left{
+  width: 45rem;
+}
+
+.bubble-right{
+  width: 45rem;
+}
+
+.expect-img{
   margin-top: 5rem;
   width: 45rem;
 }
@@ -10297,10 +10321,10 @@ form .row:first-child .floating-label-form-group {
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #2c3e50;
+  background-color: #eb2f30;
   color: #fff;
 }
 
 .copyright {
-  background-color: #1a252f;
+  background-color: #323232;
 }
