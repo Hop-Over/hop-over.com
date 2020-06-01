@@ -159,12 +159,12 @@ sup {
 }
 
 a {
-  color: #1abc9c;
+  color: #EB2F30;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #117964;
+  color: #EB2F30;;
   text-decoration: underline;
 }
 
@@ -609,6 +609,15 @@ pre code {
   }
 }
 .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
+  padding-top: 3rem;
+  height: 52rem;
+}
+
+.footer-row{
   display: flex;
   flex-wrap: wrap;
   margin-right: -1.5rem;
@@ -4028,9 +4037,10 @@ input[type=button].btn-block {
 .navbar-nav {
   display: flex;
   flex-direction: column;
-  padding-left: 0;
+  padding-left: 11rem;
   margin-bottom: 0;
   list-style: none;
+  width: 50%;
 }
 .navbar-nav .nav-link {
   padding-right: 0;
@@ -4073,6 +4083,16 @@ input[type=button].btn-block {
   content: "";
   background: no-repeat center center;
   background-size: 100% 100%;
+}
+
+.navbar .navbar-wait {
+  color: #ffffff;
+  background: linear-gradient(to left,#1c7eda,#329ee1);
+}
+
+.navbar .navbar-contact{
+  color: #1c7eda;
+  border: 2px solid #1c7eda;
 }
 
 @media (max-width: 575.98px) {
@@ -10112,7 +10132,7 @@ h3 {
   padding-bottom: 1rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
-  box-shadow: 0 5px 5px 0px #F4F4F4;
+  box-shadow: 0 8px 8px 0px #F4F4F4;
 }
 #mainNav .navbar-brand {
   color: #EB2F30;
@@ -10139,8 +10159,8 @@ h3 {
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     transition: padding-top 0.3s, padding-bottom 0.3s;
   }
   #mainNav .navbar-brand {
@@ -10160,8 +10180,8 @@ h3 {
   }
 
   #mainNav.navbar-shrink {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.5em;
@@ -10202,8 +10222,8 @@ h3 {
     font-size: 1.5rem;
   }
   .masthead .waitlist-button{
-    color: #3A90DF;
-    border: 2px solid #3A90DF;
+    color: #1c7eda;
+    border: 2px solid #1c7eda;
     font-size: 1.75rem;
     width: 15rem;
     height: 3rem;
