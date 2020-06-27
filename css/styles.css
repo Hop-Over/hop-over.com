@@ -554,7 +554,7 @@ pre code {
 
 .paragraph-container{
   padding-top: 5rem;
-  width: 20rem;
+  width: 30rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -2491,13 +2491,12 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #1abc9c;
-  border-color: #1abc9c;
+  background: linear-gradient(to left,#1c7eda,#329ee1);
 }
 .btn-primary:hover {
   color: #fff;
   background-color: #159a80;
-  border-color: #148f77;
+
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
@@ -10055,6 +10054,16 @@ h3 {
   padding: 0;
   width: 100%;
 }
+
+.contact-section {
+  padding: 0;
+  width: 100%;
+}
+.contact-section .contact-section-heading{
+  font-size: 2.25rem;
+  line-height: 2rem;
+  margin-top: 10rem;
+}
 .page-section .page-section-heading {
   font-size: 2.25rem;
   line-height: 2rem;
@@ -10062,6 +10071,11 @@ h3 {
 }
 @media (min-width: 992px) {
   .page-section .page-section-heading {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+
+  .contact-section .contact-section-heading {
     font-size: 3rem;
     line-height: 2.5rem;
   }
@@ -10202,7 +10216,7 @@ h3 {
   width: 30rem;
 }
 .masthead .masthead-icon-container{
-  margin-top: 0.1rem;
+  margin-top: 5rem;
   border-style: none;
 }
 .masthead .masthead-icon{
@@ -10217,7 +10231,7 @@ h3 {
   .masthead .masthead-heading {
     font-size: 3.5rem;
     line-height: 3.5rem;
-    padding-top: 3rem;
+    padding-top: 4rem;
   }
   .masthead .masthead-subheading {
     font-size: 1.5rem;
@@ -10332,7 +10346,7 @@ h3 {
 }
 
 .floating-label-form-group-with-focus label {
-  color: #1abc9c;
+  color: #ef3332;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -10340,8 +10354,8 @@ form .row:first-child .floating-label-form-group {
 }
 
 .footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: #eb2f30;
   color: #fff;
 }
