@@ -159,13 +159,13 @@ sup {
 }
 
 a {
-  color: #EB2F30;
   text-decoration: none;
   background-color: transparent;
+  color:inherit;
 }
 a:hover {
-  color: #EB2F30;;
-  text-decoration: underline;
+  text-decoration: none;
+  color:inherit;
 }
 
 a:not([href]) {
@@ -553,6 +553,13 @@ pre code {
 }
 
 .paragraph-container{
+  padding-top: 5rem;
+  width: 20rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.message-container{
   padding-top: 5rem;
   width: 30rem;
   margin-right: auto;
