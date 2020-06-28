@@ -10225,9 +10225,11 @@ h3 {
 .masthead .masthead-icon-container{
   margin-top: 5rem;
   border-style: none;
+  text-decoration: none;
 }
 .masthead .masthead-icon{
   width: 5rem;
+  text-decoration: none;
 }
 
 @media (min-width: 992px) {
