@@ -553,12 +553,26 @@ pre code {
 }
 
 .paragraph-container{
-  padding-top: 5rem;
-  width: 20rem;
-  margin-right: auto;
-  margin-left: auto;
+    padding-top: 5rem;
+    width: 20rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 
+@media screen and (max-width: 600px) {
+    .paragraph-container{
+        padding-top: 0rem;
+        width: 20rem;
+        margin-right: auto;
+        margin-left: auto;
+      }
+}
+@media screen and (min-width: 900px){
+    .navbar-brand {
+        position: absolute;
+        padding: 300px;
+    }
+}
 .message-container{
   padding-top: 5rem;
   width: 30rem;
@@ -7596,8 +7610,17 @@ button.bg-dark:focus {
 
 .mr-2,
 .mx-2 {
-  margin-left: 10rem !important;
+  /* margin-left: 10rem !important; */
   margin-top: 15rem;
+}
+
+@media screen and (max-width: 600px) {
+    .mr-2,
+    .mx-2 {
+        background-color: blue;
+        /* margin-right: 31rem !important; */
+        /* margin-top: 15rem; */
+    }
 }
 
 .mb-2,
@@ -7607,9 +7630,15 @@ button.bg-dark:focus {
 
 .ml-2,
 .mx-2 {
-  margin-left: -40rem !important;
+  /* margin-left: -40rem !important; */
 }
 
+@media screen and (max-width: 600px) {
+    .ml-2,
+    .mx-2 {
+    margin-left: -31rem !important;
+    }
+}
 .m-3 {
   margin: 1rem !important;
 }
@@ -10072,10 +10101,20 @@ h3 {
   margin-top: 10rem;
 }
 .page-section .page-section-heading {
-  font-size: 2.25rem;
-  line-height: 2rem;
-  margin-top: 20rem;
+    font-size: 2.25rem;
+    line-height: 2rem;
+    margin-top: 13rem;
+  }
+
+
+  @media screen and (max-width: 600px) {
+  .page-section .page-section-heading {
+    font-size: 2.25rem;
+    line-height: 2rem;
+    margin-top: 3rem;
+  }
 }
+
 @media (min-width: 992px) {
   .page-section .page-section-heading {
     font-size: 3rem;
@@ -10219,9 +10258,40 @@ h3 {
 .masthead .masthead-subheading {
   font-size: 0.5rem;
 }
+
+
 .masthead .masthead-avatar {
-  width: 30rem;
-}
+    width: 30vw;
+  }
+  
+  /* On screens that are 992px or less, set the background color to blue */
+  /* @media screen and (max-width: 992px) {
+    .masthead .masthead-avatar {
+        width: 100vw;
+      }
+  } */
+  
+  /* On screens that are 600px or less, set the background color to olive */
+  @media screen and (max-width: 600px) {
+    .masthead .masthead-avatar {
+        width: 100vw;
+      }
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .hide-mobile {
+        display: none;
+      }
+  }
+
+  @media screen and (max-width: 600px) {
+    .bubble {
+      display: none;
+    }
+  }
+
+
 .masthead .masthead-icon-container{
   margin-top: 5rem;
   border-style: none;
@@ -10262,6 +10332,8 @@ h3 {
 .bubble-left{
   width: 45rem;
 }
+
+
 
 .bubble-right{
   width: 45rem;

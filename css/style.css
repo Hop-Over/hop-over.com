@@ -1,0 +1,207 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+p{
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+.navbar-logo {
+    width: 10vw;
+}
+
+.navbar-brand{
+    margin-left: 10em;
+}
+
+.navbar-collapse{
+    margin-right: 10em;
+}
+.expect-better-div{
+    text-align: center;
+}
+
+.expect-better{
+    max-width: 50%;
+}
+
+.contact-nav-btn{
+    color: #007bff;
+	background-color: transparent;
+	background-image: none;
+    border-color: #1c7eda;
+    border-width: 0.1em;
+}
+
+.waitlist-nav-btn{
+    background: linear-gradient(to left,#1c7eda,#329ee1);
+    color: white;
+    border-color: transparent;
+    border-width: 0.1em;
+}
+
+.nav-btn{
+    margin-left:10px;
+}
+
+.header-img{
+    width: 23vw;
+    padding-bottom: 10%;
+}
+.header-div{
+    text-align: center;
+}
+.scroll-button{
+    width: 5vw;
+}
+.chat-left,
+.chat-right{
+    /* text-align: left; */
+    width: 30vw;
+}
+
+.chat-left-div,
+.chat-right-div{
+    text-align: center;
+    overflow: hidden;
+}
+.chat-left-div{
+    direction: rtl;
+}
+
+.chat-right-div{
+    margin-top: 10%
+}
+
+.phone{
+    width: 15vw;
+}
+.phone-div{
+    text-align: center;
+}
+
+.section-heading,
+.section-body{
+    text-align: center;
+}
+
+.section-body{
+    font-size: 1.5em;
+}
+
+.section-heading{
+    font-size: 5em;
+    font-weight: bold;
+    padding-bottom: 10%;
+}
+
+.header-section{
+    padding-top: 5%;
+}
+
+.content-section{
+    padding-top: 20%;
+    /* padding-bottom: 10%; */
+}
+.intelligent{
+    padding-bottom: 0%;
+}
+
+.waitlist-button{
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    border-color: #2196F3;
+    color: dodgerblue;
+    font-size: 2em;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.tagline{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.footer{
+    text-align: center;
+    background-color: #eb2f30;
+    color: white;
+}
+
+.fab {
+    color: white;
+}
+
+.social{
+    width: 2em;
+    height: 2em;
+    border-radius: 200px;
+    border: white;
+}
+@media screen and (max-width: 600px) {
+    .header-img{
+        width: 70vw;
+        padding-bottom: 23%;
+    }
+
+    .navbar-brand{
+        margin-left: 0em;
+    }
+    
+    .navbar-collapse{
+        margin-right: 0em;
+    }
+
+    .tagline{
+        padding-top: 23%;
+        padding-bottom: 23%;
+    }
+    .scroll-button{
+        width: 20vw;
+    }
+    .navbar-logo {
+        width: 30vw;
+    }
+    .chat-left,
+    .chat-right{
+        width: 60vw;
+    }
+    .chat-left{
+        margin-right: 14em;
+    }
+    .chat-right{
+        margin-left: 14em;
+    }
+    .chat-left-div{
+        text-align: left;
+        overflow: hidden;
+    }
+    .chat-right-div{
+        text-align: right;
+        overflow: hidden;
+    }
+    .section-heading{
+        font-size: 3em;
+        font-weight: bold;
+        padding-bottom: 10%;
+    }
+    .phone{
+        width: 50vw;
+    }
+    .content-section{
+        padding-top: 30%;
+    }
+    .expect-better{
+        max-width: 90%;
+    }
+}
