@@ -148,6 +148,85 @@ p{
     border-radius: 200px;
     border: white;
 }
+
+.form-style{
+  position: relative;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.heading{
+    font-size: 3em;
+    font-weight: bold;
+    padding-bottom: 1%;
+    padding-top: 6%;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 1rem);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0 solid #ced4da;
+    border-radius: 0.5rem;
+    border-color: #fff;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: x-large;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    font-size: x-large;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    font-size: x-large;
+}
+:-moz-placeholder { /* Firefox 18- */
+    font-size: x-large;
+}
+
+#message{
+    height: 20vh
+}
+
+input{
+    border: 0px none;
+}
+
+label{
+    visibility: hidden;
+}
+  
+select.form-control:focus::-ms-value {
+    color: #495057;
+    background-color: #fff;
+}
+
+.form-control-file,
+.form-control-range {
+    display: block;
+    width: 100%;
+}
+
+
 @media screen and (max-width: 600px) {
     .header-img{
         width: 70vw;
