@@ -4,6 +4,7 @@ html {
 
 p{
     font-family:  acumin-pro,sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.3em;
 }
 
 .navbar {
@@ -73,15 +74,16 @@ p{
     overflow: hidden;
 }
 .chat-left-div{
+  margin-bottom: 17%;
     direction: rtl;
 }
 
 .chat-right-div{
-    margin-top: 15%
+    margin-top: 17%
 }
 
 .phone{
-    width: 15vw;
+    width: 20vw;
 }
 .phone-div{
     text-align: center;
@@ -97,7 +99,7 @@ p{
 }
 
 .section-heading{
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: bold;
     padding-bottom: 5%;
 }
@@ -109,9 +111,20 @@ p{
 }
 
 .content-section{
-    padding-top: 10%;
+    padding-top: 15%;
+    color: #323232;
     /* padding-bottom: 10%; */
 }
+
+.intuitive-top{
+  text-align: left;
+}
+.intuitive-bottom{
+  margin-top: 5%;
+  padding-top: 3em;
+  text-align: right;
+}
+
 .intelligent{
     padding-bottom: 0%;
 }
@@ -124,7 +137,7 @@ p{
     border-radius: 5px;
     border-color: #1c7eda;
     color: #1c7eda;
-    font-size: 2em;
+    font-size: 1.75em;
     padding-left: 2%;
     padding-right: 2%;
 }
@@ -132,25 +145,22 @@ p{
 .tagline{
     padding-top: 5%;
     padding-bottom: 5%;
-    font-size: 3.75em;
+    font-size: 3.5em;
     font-weight: bold;
 }
-
 .footer{
     text-align: center;
-    background-color: #eb2f30;
+    background-color: #323232;
     color: white;
+    font-size: 2em;
 }
 
 .fab {
-    color: white;
+  color: white;
 }
 
-.social{
-    width: 2em;
-    height: 2em;
-    border-radius: 200px;
-    border: white;
+.copyright{
+  font-size: 0.25em;
 }
 
 .form-style{
@@ -241,7 +251,7 @@ select.form-control:focus::-ms-value {
     }
 
     .scroll-button{
-        width: 20vw;
+        width: 15vw;
     }
 
     .waitlist-button{
@@ -271,9 +281,6 @@ select.form-control:focus::-ms-value {
     .navbar-collapse{
         margin-right: 0em;
     }
-    .scroll-button{
-        width: 20vw;
-    }
     .navbar-logo {
         width: 30vw;
     }
@@ -298,16 +305,16 @@ select.form-control:focus::-ms-value {
         overflow: hidden;
     }
     .section-heading{
-        font-size: 2em;
+        font-size: 2.75em;
         font-weight: bold;
     }
     .phone{
         width: 45vw;
-        padding-bottom: 10%;
         padding-top: 5%;
     }
     .content-section{
-        padding-top: 30%;
+        padding-top: 40%;
+        color: #323232;
     }
     .expect-better{
         max-width: 100%;
@@ -324,4 +331,25 @@ select.form-control:focus::-ms-value {
       width: 65%;
       text-align: right;
     }
+    .footer{
+        text-align: center;
+        background-color: #323232;
+        color: white;
+        font-size: 1.5em;
+    }
+
+    .fab {
+      color: white;
+    }
+
+    .follow{
+      text-align: left;
+    }
+
+    .social{
+      text-align: left;
+        width: 2em;
+        height: 2em;
+    }
+
 }
