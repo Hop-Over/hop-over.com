@@ -197,6 +197,8 @@ p{
   display: flex;
   text-align: center;
   vertical-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-info{
