@@ -4,7 +4,6 @@ html {
 
 p{
     font-family:  acumin-pro,sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    line-height: 1.3em;
 }
 
 .navbar {
@@ -244,6 +243,11 @@ body{
 input:focus, textarea:focus, select:focus{
     outline: none;
 }
+
+input::placeholder {
+  overflow: visible;
+}
+
 
 .form{
   padding-top: 3%;
