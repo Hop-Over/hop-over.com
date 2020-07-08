@@ -415,12 +415,12 @@ select.form-control:focus::-ms-value {
 
       .header-img{
         width: 200vw;
-        margin-top: -80vw;
+        margin-top: -60vw;
         margin-left: -75vw;
       }
 
       .scroll-button{
-          width: 15vw;
+          width: 0;
       }
 
       .waitlist-button{
