@@ -47,10 +47,10 @@ validateEmail = (email) => {
 }
 
 
-validateReferral = (email) => {
+validateReferral = (referral, email) => {
 	var regEmail = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
   const error = document.getElementById("referral-error")
-  if((email !== "") && !regEmail.test(email)){
+  if((referral !== "") && (!regEmail.test(referral) || referral !== email )){
     error.classList.remove('text-hidden')
     error.classList.add('help-block')
     error.classList.add('text-danger')
@@ -65,7 +65,7 @@ validateReferral = (email) => {
 
 validateInputs = (name, email, referral) => {
   isNameValid = validateName(name)
-  isEmailValid = validateEmail(email)
+  isEmailValid = validateEmail(referral, email)
   isReferralValid = validateReferral(referral)
   console.log("Name: " + isNameValid)
   console.log("Email " + isEmailValid)
