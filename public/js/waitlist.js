@@ -67,9 +67,6 @@ validateInputs = (name, email, referral) => {
   isNameValid = validateName(name)
   isEmailValid = validateEmail(referral, email)
   isReferralValid = validateReferral(referral)
-  console.log("Name: " + isNameValid)
-  console.log("Email " + isEmailValid)
-  console.log("Referral " + isReferralValid)
   if(isNameValid && isEmailValid && isReferralValid){
     return true
   } else {
@@ -81,7 +78,6 @@ addToWaitlist = async (db, name, email, betaAccess) => {
   await searchStore(db, email)
   .then((doc) => {
     if (doc.exists){
-      console.log("Already in Database")
       location.reload()
       window.location.href="alreadyExists.html"
     }
@@ -93,7 +89,6 @@ addToWaitlist = async (db, name, email, betaAccess) => {
       referrals: 0
       })
       .then(function() {
-        console.log("Successfully added to waitlist");
         location.reload()
         window.location.href="thanks.html"
       })
