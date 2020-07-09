@@ -83,6 +83,7 @@ addToWaitlist = async (db, name, email, betaAccess) => {
     if (doc.exists){
       console.log("Already in Database")
       location.reload()
+      window.location.href="alreadyExists.html"
     }
     else {
       db.collection("waitlist").doc(email).set({
@@ -94,6 +95,7 @@ addToWaitlist = async (db, name, email, betaAccess) => {
       .then(function() {
         console.log("Successfully added to waitlist");
         location.reload()
+        window.location.href="thanks.html"
       })
       .catch(function(error) {
         console.error("Error adding document: ", error);
@@ -112,6 +114,8 @@ betaValue = formatBetaAccess(betaAccess.value)
 
 submit.addEventListener("click", (event) => {
   event.preventDefault()
-  //addToWaitlist(db, name.value, email.value, formatBetaAccess(betaValue))
-  validateInputs(name.value, email.value, referral.value)
+  var submitReady = validateInputs(name.value, email.value, referral.value)
+  if (submitReady){
+    addToWaitlist(db, name.value, email.value, formatBetaAccess(betaValue))
+  }
 })
