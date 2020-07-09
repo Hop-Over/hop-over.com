@@ -13,11 +13,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
-    <link rel="manifest" href="/assets/img/site.webmanifest">
-    <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/assets/img/favicon.ico">
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    <link rel="mask-icon" href="assets/img/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="/assets/img/browserconfig.xml">
+    <meta name="msapplication-config" content="assets/img/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <!-- Favicon Stuff End -->
     <!-- Font Awesome icons (free version)-->
@@ -174,24 +174,6 @@
     <script src="assets/mail/contact_me.js"></script>
     <!-- Core theme JS-->
     <script src="js/script.js"></script>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
-
-    <script>
-      // Your web app's Firebase configuration
-      $(document).ready(function(){
-        $.getJSON('config.json', function(data){
-            console.log(data.apiKey);
-        }).fail(function(){
-            console.log("An error has occurred.");
-        });
-      });
-    </script>
 </body>
 
 </html>
