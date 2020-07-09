@@ -131,6 +131,7 @@ authChanged = () => {
         if (user) {
             var isAnonymous = user.isAnonymous;
             var uid = user.uid;
+            console.log('uid' + uid)
             this.anonIn = true
         }else{
             this.anonIn = false
