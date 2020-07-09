@@ -15,28 +15,62 @@ formatBetaAccess = (betaAccess) => {
 
 validateName = (name) => {
     var regName = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/;
-    if(!regName.test(name)){
-      return false;
+    const error = document.getElementById("name-error")
 
+    if((name === "")){
+      error.classList.remove('text-hidden')
+      error.classList.add('help-block')
+      error.classList.add('text-danger')
+      return false;
     } else {
+      error.classList.remove('help-block')
+      error.classList.remove('text-danger')
+      error.classList.add('text-hidden')
       return true ;
     }
 }
 
 validateEmail = (email) => {
 	var regEmail = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-    if(!regEmail.test(email)){
-      return false;
-    } else {
-      return true;
-    }
+  const error = document.getElementById("email-error")
+  if(!regEmail.test(email)){
+    error.classList.remove('text-hidden')
+    error.classList.add('help-block')
+    error.classList.add('text-danger')
+    return false;
+  } else {
+    error.classList.remove('help-block')
+    error.classList.remove('text-danger')
+    error.classList.add('text-hidden')
+    return true;
+  }
 }
 
-validateInputs = (name, email) => {
+
+validateReferral = (email) => {
+	var regEmail = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  const error = document.getElementById("referral-error")
+  if((email !== "") && !regEmail.test(email)){
+    error.classList.remove('text-hidden')
+    error.classList.add('help-block')
+    error.classList.add('text-danger')
+    return false;
+  } else {
+    error.classList.remove('help-block')
+    error.classList.remove('text-danger')
+    error.classList.add('text-hidden')
+    return true;
+  }
+}
+
+validateInputs = (name, email, referral) => {
   isNameValid = validateName(name)
   isEmailValid = validateEmail(email)
-
-  if(isNameValid && isEmailValid){
+  isReferralValid = validateReferral(referral)
+  console.log("Name: " + isNameValid)
+  console.log("Email " + isEmailValid)
+  console.log("Referral " + isReferralValid)
+  if(isNameValid && isEmailValid && isReferralValid){
     return true
   } else {
     return false
@@ -44,7 +78,6 @@ validateInputs = (name, email) => {
 }
 
 addToWaitlist = async (db, name, email, betaAccess) => {
-
   await searchStore(db, email)
   .then((doc) => {
     if (doc.exists){
@@ -76,7 +109,9 @@ searchStore = async (db,email) => {
 }
 
 betaValue = formatBetaAccess(betaAccess.value)
+
 submit.addEventListener("click", (event) => {
   event.preventDefault()
-  addToWaitlist(db, name.value, email.value, formatBetaAccess(betaValue))
+  //addToWaitlist(db, name.value, email.value, formatBetaAccess(betaValue))
+  validateInputs(name.value, email.value, referral.value)
 })

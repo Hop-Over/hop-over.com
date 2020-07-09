@@ -6,6 +6,10 @@ p{
     font-family:  acumin-pro,sans-serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.text-hidden{
+  font-size: 0; 
+}
+
 .navbar {
     -webkit-box-shadow: 0 8px 6px -6px #999;
     -moz-box-shadow: 0 8px 6px -6px #999;
