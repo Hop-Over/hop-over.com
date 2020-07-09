@@ -1,0 +1,12 @@
+{
+  "firebaseConfig":{
+    "apiKey": "AIzaSyBcxDmkwgA2wxU2Wietw2jfAbBesNxjQDA",
+    "authDomain": "waitlist-17508.firebaseapp.com",
+    "databaseURL": "https://waitlist-17508.firebaseio.com",
+    "projectId": "waitlist-17508",
+    "storageBucket": "waitlist-17508.appspot.com",
+    "messagingSenderId": "259604313738",
+    "appId": "1:259604313738:web:dac3710735a18342e0df73",
+    "measurementId": "G-1LGRXFH14G"
+  }
+}
