@@ -3,7 +3,7 @@ const name = document.getElementById("name")
 const email = document.getElementById("email")
 const betaAccess = document.getElementById("betaAccess")
 const referral = document.getElementById("reference")
-const submit = document.getElementById("joinWaitlistButton")
+const submit = document.getElementById("sendMessageButton")
 var anonIn = false;
 
 formatBetaAccess = (betaAccess) => {
@@ -109,7 +109,6 @@ searchStore = async (db,email) => {
   return response
 }
 
-betaValue = formatBetaAccess(betaAccess.value)
 submit.addEventListener("click", (event) => {
   event.preventDefault()
 
