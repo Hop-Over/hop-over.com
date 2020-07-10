@@ -4,6 +4,7 @@ const email = document.getElementById("email")
 const betaAccess = document.getElementById("betaAccess")
 const referral = document.getElementById("reference")
 const submit = document.getElementById("joinWaitlistButton")
+var anonIn = false;
 
 formatBetaAccess = (betaAccess) => {
   if (betaAccess !== "on"){
@@ -106,11 +107,11 @@ searchStore = async (db,email) => {
 }
 
 betaValue = formatBetaAccess(betaAccess.value)
-var anonIn = false;
 submit.addEventListener("click", (event) => {
   event.preventDefault()
   
   var submitReady = validateInputs(name.value, email.value, referral.value)
+  console.log(this.anonIn)
   if (submitReady && this.anonIn){
     addToWaitlist(db, name.value, email.value, formatBetaAccess(betaValue))
   }
@@ -118,7 +119,12 @@ submit.addEventListener("click", (event) => {
 
 
 loginAnon = () => {
-    firebase.auth().signInAnonymously().catch(function(error) {
+    firebase.auth().signInAnonymously()
+    .then(function(response){
+        console.log('logging in')
+        console.log(response)
+    })
+    .catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log(errorCode)
@@ -126,15 +132,15 @@ loginAnon = () => {
     });
 }
 
-authChanged = () => {
-    firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-            var isAnonymous = user.isAnonymous;
-            var uid = user.uid;
-            console.log('uid' + uid)
-            this.anonIn = true
-        }else{
-            this.anonIn = false
-        }
-    });
-}
+
+firebase.auth().onAuthStateChanged(function(user) {
+    console.log("on auth state changed")
+    if (user) {
+        var isAnonymous = user.isAnonymous;
+        var uid = user.uid;
+        console.log('uid' + uid)
+        this.anonIn = true
+    }else{
+        this.anonIn = false
+    }
+});
