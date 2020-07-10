@@ -32,7 +32,6 @@ validateName = (name) => {
 }
 
 validateEmail = (email) => {
-  console.log('email ' + email)
   var regEmail = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
   const error = document.getElementById("email-error")
   if(!regEmail.test(email)){
@@ -50,8 +49,6 @@ validateEmail = (email) => {
 
 
 validateReferral = (referral, email) => {
-  console.log('referral '+ referral)
-  console.log('email ' + email)
   var regEmail = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
   const error = document.getElementById("referral-error")
   if((referral !== "") && (!regEmail.test(referral) && referral !== email )){
@@ -112,9 +109,8 @@ searchStore = async (db,email) => {
 betaValue = formatBetaAccess(betaAccess.value)
 submit.addEventListener("click", (event) => {
   event.preventDefault()
-  
+
   var submitReady = validateInputs(name.value, email.value, referral.value)
-  console.log(anonIn)
   if (submitReady && anonIn){
     addToWaitlist(db, name.value, email.value, formatBetaAccess(betaValue))
   }
@@ -124,24 +120,20 @@ submit.addEventListener("click", (event) => {
 loginAnon = () => {
     firebase.auth().signInAnonymously()
     .then(function(response){
-        console.log('logging in')
-        console.log(response)
+        console.log('Authenticated')
     })
     .catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log(errorCode)
-        console.log(errorMessage)
     });
 }
 
 
 firebase.auth().onAuthStateChanged(function(user) {
-    console.log("on auth state changed")
     if (user) {
         var isAnonymous = user.isAnonymous;
         var uid = user.uid;
-        console.log('uid' + uid)
         anonIn = true
     }else{
         anonIn = false
