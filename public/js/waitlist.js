@@ -32,7 +32,8 @@ validateName = (name) => {
 }
 
 validateEmail = (email) => {
-	var regEmail = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  console.log('email ' + email)
+  var regEmail = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
   const error = document.getElementById("email-error")
   if(!regEmail.test(email)){
     error.classList.remove('text-hidden')
@@ -49,9 +50,11 @@ validateEmail = (email) => {
 
 
 validateReferral = (referral, email) => {
-	var regEmail = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+  console.log('referral '+ referral)
+  console.log('email ' + email)
+  var regEmail = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
   const error = document.getElementById("referral-error")
-  if((referral !== "") && (!regEmail.test(referral) || referral !== email )){
+  if((referral !== "") && (!regEmail.test(referral) && referral !== email )){
     error.classList.remove('text-hidden')
     error.classList.add('help-block')
     error.classList.add('text-danger')
@@ -66,8 +69,8 @@ validateReferral = (referral, email) => {
 
 validateInputs = (name, email, referral) => {
   isNameValid = validateName(name)
-  isEmailValid = validateEmail(referral, email)
-  isReferralValid = validateReferral(referral)
+  isEmailValid = validateEmail(email)
+  isReferralValid = validateReferral(referral, email)
   if(isNameValid && isEmailValid && isReferralValid){
     return true
   } else {
@@ -111,8 +114,8 @@ submit.addEventListener("click", (event) => {
   event.preventDefault()
   
   var submitReady = validateInputs(name.value, email.value, referral.value)
-  console.log(this.anonIn)
-  if (submitReady && this.anonIn){
+  console.log(anonIn)
+  if (submitReady && anonIn){
     addToWaitlist(db, name.value, email.value, formatBetaAccess(betaValue))
   }
 })
@@ -139,8 +142,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         var isAnonymous = user.isAnonymous;
         var uid = user.uid;
         console.log('uid' + uid)
-        this.anonIn = true
+        anonIn = true
     }else{
-        this.anonIn = false
+        anonIn = false
     }
 });
