@@ -75,7 +75,19 @@ validateInputs = (name, email, referral) => {
   }
 }
 
-addToWaitlist = async (db, name, email, betaAccess) => {
+updateReferralNumber = async (db,referralEmail) => {
+  await searchStore(db, referralEmail)
+  .then((doc) => {
+    if (doc.exists){
+      var referralUser = doc.data()
+      db.collection("waitlist").doc(referralEmail).set({
+      referrals: referralUser.referrals + 1
+    }, { merge: true })
+    }
+  })
+}
+
+addToWaitlist = async (db, name, email, referralEmail,betaAccess) => {
   await searchStore(db, email)
   .then((doc) => {
     if (doc.exists){
@@ -87,6 +99,7 @@ addToWaitlist = async (db, name, email, betaAccess) => {
       name: name,
       email: email,
       betaAccess: betaAccess,
+      referralEmail: referralEmail,
       referrals: 0
       })
       .then(function() {
@@ -112,7 +125,8 @@ submit.addEventListener("click", (event) => {
 
   var submitReady = validateInputs(name.value, email.value, referral.value)
   if (submitReady && anonIn){
-    addToWaitlist(db, name.value, email.value, formatBetaAccess(betaValue))
+    updateReferralNumber(db, referral.value)
+    addToWaitlist(db, name.value, email.value, referral.value,formatBetaAccess(betaValue))
   }
 })
 
