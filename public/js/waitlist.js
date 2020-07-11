@@ -1,18 +1,10 @@
 const db = firebase.firestore();
 const name = document.getElementById("name")
 const email = document.getElementById("email")
-const betaAccess = document.getElementById("betaAccess")
+const beta = document.getElementById("beta")
 const referral = document.getElementById("reference")
 const submit = document.getElementById("joinWaitlistButton")
 var anonIn = false;
-
-formatBetaAccess = (betaAccess) => {
-  if (betaAccess !== "on"){
-    return true
-  } else {
-    return false
-  }
-}
 
 validateName = (name) => {
     var regName = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/;
@@ -51,7 +43,8 @@ validateEmail = (email) => {
 validateReferral = (referral, email) => {
   var regEmail = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
   const error = document.getElementById("referral-error")
-  if((referral !== "") && (!regEmail.test(referral) && referral !== email )){
+
+  if(referral !== "" && (!regEmail.test(referral) || referral === email )){
     error.classList.remove('text-hidden')
     error.classList.add('help-block')
     error.classList.add('text-danger')
@@ -119,14 +112,13 @@ searchStore = async (db,email) => {
   return response
 }
 
-betaValue = formatBetaAccess(betaAccess.value)
 submit.addEventListener("click", (event) => {
   event.preventDefault()
 
   var submitReady = validateInputs(name.value, email.value, referral.value)
   if (submitReady && anonIn){
     updateReferralNumber(db, referral.value)
-    addToWaitlist(db, name.value, email.value, referral.value,formatBetaAccess(betaValue))
+    addToWaitlist(db, name.value, email.value, referral.value, beta.checked)
   }
 })
 
