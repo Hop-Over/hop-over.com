@@ -487,7 +487,7 @@ select.form-control:focus::-ms-value {
           padding-top: 5%;
       }
       .content-section{
-          padding-top: 40%;
+          padding-top: 15%;
           color: #323232;
       }
 
@@ -586,7 +586,7 @@ select.form-control:focus::-ms-value {
       }
 
       .content-section{
-          padding-top: 50%;
+          padding-top: 20%;
           color: #323232;
           width: 100%;
       }
