@@ -93,7 +93,7 @@ contactUs = async (db, name, email, phone, message) => {
   })
   .then(function() {
     location.reload()
-    window.location.href="afterContact.html"
+    window.location.href="contact-submit.html"
   })
   .catch(function(error) {
     console.error("Error adding document: ", error);

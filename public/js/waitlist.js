@@ -85,7 +85,7 @@ addToWaitlist = async (db, name, email, referralEmail,betaAccess) => {
   .then((doc) => {
     if (doc.exists){
       location.reload()
-      window.location.href="alreadyExists.html"
+      window.location.href="welcome-back.html"
     }
     else {
       db.collection("waitlist").doc(email).set({
