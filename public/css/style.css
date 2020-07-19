@@ -71,17 +71,22 @@ a:hover{
     margin-left:10px;
 }
 
+.getintouch{
+  width: 40vw;
+  margin-top: -5vw;
+}
+
 .header-img{
-    width: 50vw;
+    width: 55vw;
     margin-top: -20vw;
-    margin-right: 30vw;
-    padding-bottom: 5%;
+    margin-right: 20vw;
+
 }
 .header-div{
     text-align: center;
 }
 .scroll-button{
-    width: 5vw;
+    width: 4vw;
     transition: 0.3s;
 }
 
@@ -333,14 +338,19 @@ select.form-control:focus::-ms-value {
 @media screen and (max-width: 600px) and (max-height: 900px){
 
     .header-img{
-      width: 175vw;
-      margin-top: -35vw;
-      margin-left: -80vw;
-      padding-bottom: 10%;
+      width: 200vw;
+      margin-top: -50vw;
+      margin-left: -75vw;
+      padding-bottom: 2%;
     }
 
     .scroll-button{
         width: 15vw;
+    }
+
+    .getintouch{
+      width: 90vw;
+      margin-top: -5vw;
     }
 
     .waitlist-button{
@@ -424,17 +434,12 @@ select.form-control:focus::-ms-value {
     .intuitive-bottom{
       margin-left: 35%;
       width: 65%;
+      margin-top: -5%;
       text-align: right;
     }
   }
 
   @media screen and (max-width: 600px) and (max-height: 700px) {
-
-      .header-img{
-        width: 170vw;
-        margin-top: -30vw;
-        margin-left: -75vw;
-      }
 
       .scroll-button{
           width: 0;
@@ -526,15 +531,13 @@ select.form-control:focus::-ms-value {
     }
 
 
-  @media screen and (max-width: 1375px) and (min-width: 900px) {
+  @media screen and (max-width: 1375px) and (min-width: 1000px){
 
       .header-img{
         width: 150vw;
         margin-top: -40vw;
-        margin-left: -60vw;
-        padding-bottom: 5%;
+        margin-left: -45vw;
       }
-
       .scroll-button{
           width: 8vw;
       }
@@ -626,9 +629,8 @@ select.form-control:focus::-ms-value {
 
         .header-img{
           width: 150vw;
-          margin-top: -50vw;
-          margin-left: -65vw;
-          padding-bottom: 5%;
+          margin-top: -40vw;
+          margin-left: -45vw;
         }
 
         .scroll-button{
