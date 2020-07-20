@@ -1,8 +1,8 @@
 const db = firebase.firestore();
 const name = document.getElementById("name")
-const email = document.getElementById("email")
+const email = document.getElementById("email").toLowerCase()
 const beta = document.getElementById("beta")
-const referral = document.getElementById("reference")
+const referral = document.getElementById("reference").toLowerCase()
 const submit = document.getElementById("joinWaitlistButton")
 var anonIn = false;
 
