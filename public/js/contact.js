@@ -113,7 +113,7 @@ submit.addEventListener("click", (event) => {
 loginAnon = () => {
     firebase.auth().signInAnonymously()
     .then(function(response){
-        console.log("Authenticated")
+        // console.log("Authenticated")
     })
     .catch(function(error) {
         var errorCode = error.code;

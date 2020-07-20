@@ -71,6 +71,7 @@ validateInputs = (name, email, referral) => {
 updateReferralNumber = async (db,referralEmail) => {
   await searchStore(db, referralEmail)
   .then((doc) => {
+      console.log(doc.data())
     if (doc.exists){
       var referralUser = doc.data()
       db.collection("waitlist").doc(referralEmail).set({
@@ -117,7 +118,9 @@ submit.addEventListener("click", (event) => {
 
   var submitReady = validateInputs(name.value, email.value, referral.value)
   if (submitReady && anonIn){
-    updateReferralNumber(db, referral.value)
+    if(referral.value !== ""){
+        updateReferralNumber(db, referral.value)
+      }
     addToWaitlist(db, name.value, email.value, referral.value, beta.checked)
   }
 })
@@ -126,7 +129,7 @@ submit.addEventListener("click", (event) => {
 loginAnon = () => {
     firebase.auth().signInAnonymously()
     .then(function(response){
-        console.log('Authenticated')
+        // console.log('Authenticated')
     })
     .catch(function(error) {
         var errorCode = error.code;
