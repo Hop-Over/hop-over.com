@@ -5,6 +5,7 @@ const beta = document.getElementById("beta")
 const referral = document.getElementById("reference")
 const submit = document.getElementById("joinWaitlistButton")
 var anonIn = false;
+document.addEventListener('contextmenu', event => event.preventDefault());
 
 validateName = (name) => {
     var regName = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/;
