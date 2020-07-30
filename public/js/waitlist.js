@@ -5,6 +5,7 @@ const beta = document.getElementById("beta")
 const referral = document.getElementById("reference")
 const submit = document.getElementById("joinWaitlistButton")
 var anonIn = false;
+document.addEventListener('contextmenu', event => event.preventDefault());
 
 validateName = (name) => {
     var regName = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/;
@@ -116,12 +117,12 @@ searchStore = async (db,email) => {
 submit.addEventListener("click", (event) => {
   event.preventDefault()
 
-  var submitReady = validateInputs(name.value, email.value, referral.value)
+  var submitReady = validateInputs(name.value, email.value.toLowerCase(), referral.value.toLowerCase())
   if (submitReady && anonIn){
     if(referral.value !== ""){
-        updateReferralNumber(db, referral.value)
+        updateReferralNumber(db, referral.value.toLowerCase())
       }
-    addToWaitlist(db, name.value, email.value, referral.value, beta.checked)
+    addToWaitlist(db, name.value, email.value.toLowerCase(), referral.value.toLowerCase(), beta.checked)
   }
 })
 
